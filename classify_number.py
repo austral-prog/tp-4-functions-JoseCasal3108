@@ -22,4 +22,9 @@ def classify_number(n):
       - "negative odd"    (negativo e impar)
       - "zero"            (el número es 0)
     """
-    return "ANSWER HERE"  # Remove this line and implement
+    if n == 0:
+        return "zero"
+
+    prefijo = "positive" if is_positive(n) else "negative"
+    sufijo = "even" if is_even(n) else "odd"
+    return f"{prefijo} {sufijo}"
