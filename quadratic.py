@@ -1,13 +1,8 @@
-# Replace the "ANSWER HERE" for your answer
-from ctypes.macholib.dyld import DEFAULT_LIBRARY_FALLBACK
-
-from pycparser.c_ast import Return
-
 def roots(a, b, c):
-    discriminante = ((b**2 -4* a * c) * 0.5)
+    discriminante = (b**2 -4* a * c)
     if discriminante > 0:
-        r1 = round(-b + discriminante**0.5)/(2*a)
-        r2 = round(-b - discriminante**0.5)/(2*a)
+        r1 = round(-b + discriminante**0.5) / (2*a)
+        r2 = round(-b - discriminante**0.5) / (2*a)
         return f"({r1}, {r2})"
     elif discriminante == 0:
         r = -b/(2*a)
